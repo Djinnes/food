@@ -1,0 +1,10 @@
+[
+  {
+    "type": "Fruit",
+    "ingredients": ["Banana", "Apple", "Tomato"]
+  },
+  {
+    "type": "Vegetable",
+    "ingredients": ["Potato"]
+  }
+]
