@@ -18,7 +18,7 @@
       "type": "string"
     },
     "products": {
-      "collection": "product_source_farms",
+      "collection": "product__farms",
       "collectionName": "product"
     }
   }

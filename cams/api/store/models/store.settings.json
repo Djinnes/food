@@ -19,11 +19,11 @@
       "via": "stores"
     },
     "country_sourced_products": {
-      "collection": "product_source_countries",
+      "collection": "product__countries",
       "collectionName": "store__products"
     },
     "farm_sourced_product": {
-      "collection": "product_source_farms",
+      "collection": "product__farms",
       "collectionName": "store__products"
     }
   }

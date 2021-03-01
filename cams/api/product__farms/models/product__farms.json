@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "product_source_countries",
+  "collectionName": "product__farms",
   "info": {
-    "name": "product_source_countries",
+    "name": "product__farms",
     "description": ""
   },
   "options": {
@@ -14,8 +14,8 @@
     "product_id": {
       "model": "product"
     },
-    "country_id": {
-      "model": "country"
+    "farm_id": {
+      "model": "farm"
     },
     "stores_using_source": {
       "collection": "store",

@@ -28,7 +28,7 @@
       "collection": "store"
     },
     "products": {
-      "collection": "product_source_countries",
+      "collection": "product__countries",
       "collectionName": "product"
     }
   }

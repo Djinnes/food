@@ -19,11 +19,11 @@
     },
     "farms": {
       "collection": "farm",
-      "collectionName": "product_source_farms"
+      "collectionName": "product__farms"
     },
     "countries": {
       "collection": "country",
-      "collectionName": "product_source_countries"
+      "collectionName": "product__countries"
     }
   }
 }
