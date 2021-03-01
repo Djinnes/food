@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ingredient_variant",
+      "handler": "ingredient_variant.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ingredient_variant/count",
+      "handler": "ingredient_variant.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ingredient_variant/:id",
+      "handler": "ingredient_variant.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ingredient_variant",
+      "handler": "ingredient_variant.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ingredient_variant/:id",
+      "handler": "ingredient_variant.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ingredient_variant/:id",
+      "handler": "ingredient_variant.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

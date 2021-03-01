@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product",
+  "info": {
+    "name": "product",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "ingredient_variant_id": {
+      "model": "ingredient_variant"
+    },
+    "brand_id": {
+      "model": "brand"
+    },
+    "farms": {
+      "collection": "farm",
+      "collectionName": "product_source_farms"
+    },
+    "countries": {
+      "collection": "country",
+      "collectionName": "product_source_countries"
+    }
+  }
+}

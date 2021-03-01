@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_source_countries",
+  "info": {
+    "name": "product_source_countries",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "product_id": {
+      "model": "product"
+    },
+    "country_id": {
+      "model": "country"
+    },
+    "stores_using_source": {
+      "collection": "store",
+      "collectionName": "store__products"
+    }
+  }
+}

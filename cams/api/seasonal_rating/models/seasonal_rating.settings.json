@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "seasonal_rating",
+  "info": {
+    "name": "seasonal_rating",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "rating": {
+      "type": "number"
+    },
+    "ingredient_variant_id": {
+      "model": "ingredient_variant"
+    },
+    "area_id": {
+      "model": "area"
+    },
+    "year_segment_id": {
+      "model": "year_segment"
+    }
+  }
+}

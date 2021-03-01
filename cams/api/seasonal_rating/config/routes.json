@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/seasonal_rating",
+      "handler": "seasonal_rating.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/seasonal_rating/count",
+      "handler": "seasonal_rating.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/seasonal_rating/:id",
+      "handler": "seasonal_rating.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/seasonal_rating",
+      "handler": "seasonal_rating.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/seasonal_rating/:id",
+      "handler": "seasonal_rating.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/seasonal_rating/:id",
+      "handler": "seasonal_rating.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

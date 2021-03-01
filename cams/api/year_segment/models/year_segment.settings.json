@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "year_segment",
+  "info": {
+    "name": "year_segment",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

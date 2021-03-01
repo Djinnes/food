@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/year_segment",
+      "handler": "year_segment.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/year_segment/count",
+      "handler": "year_segment.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/year_segment/:id",
+      "handler": "year_segment.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/year_segment",
+      "handler": "year_segment.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/year_segment/:id",
+      "handler": "year_segment.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/year_segment/:id",
+      "handler": "year_segment.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

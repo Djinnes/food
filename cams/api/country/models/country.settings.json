@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "country",
+  "info": {
+    "name": "country",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "iso": {
+      "type": "string"
+    },
+    "iso3": {
+      "type": "string"
+    },
+    "calling_code": {
+      "type": "string"
+    },
+    "stores": {
+      "via": "country_id",
+      "collection": "store"
+    },
+    "products": {
+      "collection": "product_source_countries",
+      "collectionName": "product"
+    }
+  }
+}
