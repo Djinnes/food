@@ -16,6 +16,10 @@
     },
     "country_id": {
       "model": "country"
+    },
+    "products": {
+      "collection": "product__areas",
+      "collectionName": "product"
     }
   }
 }

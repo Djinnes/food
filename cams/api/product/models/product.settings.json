@@ -24,6 +24,10 @@
     "countries": {
       "collection": "country",
       "collectionName": "product__countries"
+    },
+    "areas": {
+      "collection": "country",
+      "collectionName": "product__areas"
     }
   }
 }

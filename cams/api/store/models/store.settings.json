@@ -22,6 +22,10 @@
       "collection": "product__countries",
       "collectionName": "store__products"
     },
+    "area_sourced_products": {
+      "collection": "product__areas",
+      "collectionName": "store__products"
+    },
     "farm_sourced_product": {
       "collection": "product__farms",
       "collectionName": "store__products"
