@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "farmers_market_opening_times",
+  "info": {
+    "name": "farmers_market_opening_times",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "open": {
+      "type": "string"
+    },
+    "close": {
+      "type": "string"
+    },
+    "day": {
+      "type": "number"
+    },
+    "farmers_market_id": {
+      "model": "farmers_market"
+    }
+  }
+}

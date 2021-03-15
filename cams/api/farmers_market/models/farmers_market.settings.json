@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "farmers_market",
+  "info": {
+    "name": "farmers_market",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    }
+  }
+}

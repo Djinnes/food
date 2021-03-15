@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/farmers_market_opening_times",
+      "handler": "farmers_market_opening_times.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/farmers_market_opening_times/count",
+      "handler": "farmers_market_opening_times.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/farmers_market_opening_times/:id",
+      "handler": "farmers_market_opening_times.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/farmers_market_opening_times",
+      "handler": "farmers_market_opening_times.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/farmers_market_opening_times/:id",
+      "handler": "farmers_market_opening_times.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/farmers_market_opening_times/:id",
+      "handler": "farmers_market_opening_times.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -29,6 +29,10 @@
     "farm_sourced_product": {
       "collection": "product__farms",
       "collectionName": "store__products"
+    },
+    "product_suppliers": {
+      "collection": "product__suppliers",
+      "collectionName": "store__products"
     }
   }
 }

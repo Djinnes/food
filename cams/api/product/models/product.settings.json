@@ -26,8 +26,13 @@
       "collectionName": "product__countries"
     },
     "areas": {
-      "collection": "country",
+      "collection": "area",
       "collectionName": "product__areas"
+    }
+    ,
+    "suppliers": {
+      "collection": "supplier",
+      "collectionName": "product__suppliers"
     }
   }
 }

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/farmers_market",
+      "handler": "farmers_market.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/farmers_market/count",
+      "handler": "farmers_market.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/farmers_market/:id",
+      "handler": "farmers_market.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/farmers_market",
+      "handler": "farmers_market.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/farmers_market/:id",
+      "handler": "farmers_market.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/farmers_market/:id",
+      "handler": "farmers_market.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
