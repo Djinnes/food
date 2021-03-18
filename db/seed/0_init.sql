@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS "country"
   "iso3"         char(3)                  DEFAULT NULL,
   "calling_code" integer        NOT NULL,
   "name"         varchar UNIQUE NOT NULL,
+  "location"     varchar UNIQUE,
   "created_at"   timestamp with time zone DEFAULT current_timestamp,
   "updated_at"   timestamp with time zone DEFAULT current_timestamp
 );
@@ -163,6 +164,7 @@ CREATE TABLE IF NOT EXISTS "area"
   "country_id" integer        NOT NULL REFERENCES country (id) ON DELETE CASCADE,
   "created_at" timestamp with time zone DEFAULT current_timestamp,
   "updated_at" timestamp with time zone DEFAULT current_timestamp,
+  "location"   varchar UNIQUE,
   UNIQUE (name, country_id)
 );
 
