@@ -14,25 +14,23 @@
     "ingredient_variant_id": {
       "model": "ingredient_variant"
     },
+    "producer_farm_id": {
+      "model": "farm"
+    },
+    "producer_country_id": {
+      "model": "country"
+    },
+    "producer_area_id": {
+      "model": "area"
+    },
+    "retailer_id": {
+      "model": "retailer"
+    },
     "brand_id": {
       "model": "brand"
     },
-    "farms": {
-      "collection": "farm",
-      "collectionName": "product__farms"
-    },
-    "countries": {
-      "collection": "country",
-      "collectionName": "product__countries"
-    },
-    "areas": {
-      "collection": "area",
-      "collectionName": "product__areas"
-    }
-    ,
-    "suppliers": {
-      "collection": "supplier",
-      "collectionName": "product__suppliers"
+    "supplier_id": {
+      "model": "supplier"
     }
   }
 }

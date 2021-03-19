@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/product__countries",
-      "handler": "product__countries.find",
+      "path": "/retailer",
+      "handler": "retailer.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/product__countries/count",
-      "handler": "product__countries.count",
+      "path": "/retailer/count",
+      "handler": "retailer.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/product__countries/:id",
-      "handler": "product__countries.findOne",
+      "path": "/retailer/:id",
+      "handler": "retailer.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/product__countries",
-      "handler": "product__countries.create",
+      "path": "/retailer",
+      "handler": "retailer.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/product__countries/:id",
-      "handler": "product__countries.update",
+      "path": "/retailer/:id",
+      "handler": "retailer.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/product__countries/:id",
-      "handler": "product__countries.delete",
+      "path": "/retailer/:id",
+      "handler": "retailer.delete",
       "config": {
         "policies": []
       }

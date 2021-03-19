@@ -16,10 +16,6 @@
     },
     "location": {
       "type": "string"
-    },
-    "products": {
-      "collection": "product__suppliers",
-      "collectionName": "product"
     }
   }
 }

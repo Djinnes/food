@@ -14,15 +14,8 @@
     "name": {
       "type": "string"
     },
-    "location": {
-      "type": "string"
-    },
     "country_id": {
       "model": "country"
-    },
-    "products": {
-      "collection": "product__areas",
-      "collectionName": "product"
     }
   }
 }

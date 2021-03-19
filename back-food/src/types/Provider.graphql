@@ -1,0 +1,7 @@
+type Provider {
+  name: String
+  distance: String
+}
+type Query {
+  products(latitude: String!, longitude: String!): [Product]
+}

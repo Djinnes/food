@@ -1,0 +1,8 @@
+type Product {
+  id: ID!
+  ingredientVariant: IngredientVariant!
+  brand: Brand!
+  providers: [Provider]
+  suppliers: [Supplier]
+  distance: String
+}

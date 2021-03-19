@@ -1,48 +1,84 @@
-import React from "react";
+import React, { useState } from "react";
 import { useQuery } from "graphql-hooks";
+import { Radio, Tree } from "antd";
 import useCurrentPosition from "./hooks/useCurrentPosition";
 
-const HOMEPAGE_QUERY = `query($lat: String!, $long: String!) {
-    products(latitude: $lat, longitude: $long) {
-      id
-      ingredientVariant {
-        name
-        ingredient {
-          name
-        }
-      }
-      brand {
-        name
-      }
-      providers {
-        name
-        distance
-      }
-      suppliers {
-        name
-        distance
-      }
-    }
+const INGREDIENT_TYPE_QUERY = `query {
+  validIngredientTypes {
+    id
+    name
+  }
   }
   `;
 
+const INGREDIENT_QUERY = `query($lat: String!, $long: String!) {
+  ingredientsByDistance(latitude: $lat, longitude: $long) {
+      id
+      name
+      types {
+        id
+        name
+      }
+      variants {
+        name
+      }
+    }
+    }
+    `;
+
+const IngredientTypes = ({ onChange, value }) => {
+  const { loading, error, data } = useQuery(INGREDIENT_TYPE_QUERY);
+  if (loading) return "Loading...";
+  if (error) return "Something Bad Happened";
+  const { validIngredientTypes } = data;
+  return (
+    <Radio.Group value={value} buttonStyle="solid" onChange={onChange}>
+      <Radio.Button value="all">All</Radio.Button>
+      {validIngredientTypes.map(({ id, name }) => (
+        <Radio.Button key={id} value={id}>
+          {name}
+        </Radio.Button>
+      ))}
+    </Radio.Group>
+  );
+};
+
 const Home = () => {
+  const [ingredientTypeId, setIngredientTypeId] = useState("all");
   const [currentPosition, err] = useCurrentPosition();
-  const { loading, error, data } = useQuery(HOMEPAGE_QUERY, {
+  const { loading, error, data } = useQuery(INGREDIENT_QUERY, {
     variables: {
-      lat: err ? `${currentPosition.coords.latitude}` : "0",
-      long: err ? `${currentPosition.coords.longitude}` : "0",
+      lat: err || !currentPosition ? "0" : `${currentPosition.coords.latitude}`,
+      long:
+        err || !currentPosition ? "0" : `${currentPosition.coords.longitude}`,
     },
   });
   if (loading) return "Loading...";
   if (error) return "Something Bad Happened";
-  const { products } = data;
+  const { ingredientsByDistance } = data;
 
+  const filteredIngredients =
+    ingredientTypeId !== "all"
+      ? ingredientsByDistance.filter(({ types }) =>
+          types.find(({ id }) => id === ingredientTypeId)
+        )
+      : ingredientsByDistance;
+  const treeData = filteredIngredients.map(({ name, variants }) => ({
+    title: name,
+    key: name,
+    children: variants.map(({ name: variantName }) => ({
+      title: variantName,
+      key: variantName,
+    })),
+  }));
   return (
     <div>
-      {products.map((p) => (
-        <div>{p.id}</div>
-      ))}
+      <IngredientTypes
+        value={ingredientTypeId}
+        onChange={({ target: { value } }) => setIngredientTypeId(value)}
+      />
+
+      <Tree treeData={treeData} />
     </div>
   );
 };

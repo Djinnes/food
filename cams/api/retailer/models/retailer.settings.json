@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "country",
+  "collectionName": "retailer",
   "info": {
-    "name": "country",
+    "name": "retailer",
     "description": ""
   },
   "options": {
@@ -12,15 +12,6 @@
   },
   "attributes": {
     "name": {
-      "type": "string"
-    },
-    "iso": {
-      "type": "string"
-    },
-    "iso3": {
-      "type": "string"
-    },
-    "calling_code": {
       "type": "string"
     }
   }
