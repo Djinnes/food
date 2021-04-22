@@ -1,8 +1,7 @@
 type Product {
   id: ID!
-  ingredientVariant: IngredientVariant!
   brand: Brand!
-  providers: [Provider]
-  suppliers: [Supplier]
-  distance: String
+  edibleMaterialVariant: EdibleMaterialVariant!
+  ingredient: Ingredient!
+  supplyChainLinks: [SupplyChainLink]
 }

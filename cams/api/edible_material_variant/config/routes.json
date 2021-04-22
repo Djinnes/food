@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/edible_material_variant",
+      "handler": "edible_material_variant.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/edible_material_variant/count",
+      "handler": "edible_material_variant.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/edible_material_variant/:id",
+      "handler": "edible_material_variant.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/edible_material_variant",
+      "handler": "edible_material_variant.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/edible_material_variant/:id",
+      "handler": "edible_material_variant.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/edible_material_variant/:id",
+      "handler": "edible_material_variant.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,6 +1,0 @@
-type IngredientVariant {
-  id: ID!
-  name: String
-  ingredient: Ingredient!
-  producer: [Float]
-}

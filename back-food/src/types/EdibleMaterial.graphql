@@ -1,0 +1,9 @@
+type EdibleMaterial {
+  id: ID!
+  name: String!
+  variants: [EdibleMaterialVariant!]!
+}
+
+type Query {
+  foods: [EdibleMaterial]
+}

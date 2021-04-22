@@ -1,8 +1,0 @@
-type IngredientType {
-  id: ID!
-  name: String
-}
-
-type Query {
-  validIngredientTypes: [IngredientType!]!
-}

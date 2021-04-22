@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "processing",
+  "info": {
+    "name": "processing",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "ingredients": {
+      "collection": "ingredient",
+      "via": "processing_id"
+    }
+  }
+}

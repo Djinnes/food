@@ -22,6 +22,10 @@
     },
     "calling_code": {
       "type": "string"
+    },
+    "retailers": {
+      "via": "country_id",
+      "collection": "retailer"
     }
   }
 }

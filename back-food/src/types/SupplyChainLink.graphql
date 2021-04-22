@@ -1,0 +1,5 @@
+type SupplyChainLink {
+  id: ID!
+  location: Location!
+  chainStep: Int!
+}

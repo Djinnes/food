@@ -1,3 +1,4 @@
 type Brand {
+  id: ID!
   name: String
 }

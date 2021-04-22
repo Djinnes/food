@@ -1,0 +1,9 @@
+type EdibleMaterialVariant {
+  id: ID!
+  name: String!
+  products: [Product]
+}
+
+type Query {
+  edibleMaterialVariant(id: ID!): EdibleMaterialVariant
+}

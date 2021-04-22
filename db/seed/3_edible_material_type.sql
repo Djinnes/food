@@ -1,0 +1,16 @@
+INSERT INTO edible_material_type (name)
+VALUES ('Beans'),
+       ('Cruciferous Vegetable'),
+       ('Legume'),
+       ('Seed'),
+       ('Root'),
+       ('Fungus'),
+       ('Nut'),
+       ('Leaf'),
+       ('Leafy Vegetable'),
+       ('Fruit'),
+       ('Whole Grain'),
+       ('Mineral'),
+       ('Tree Bark'),
+       ('Stem'),
+       ('Grass');

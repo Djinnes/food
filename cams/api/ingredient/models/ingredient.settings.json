@@ -16,6 +16,18 @@
     },
     "ingredient_types": {
       "collection": "ingredient_type"
+    },
+    "edible_material_id": {
+      "via": "ingredients",
+      "model": "edible_material"
+    },
+    "edible_material_variant_id": {
+      "via": "ingredients",
+      "model": "edible_material_variant"
+    },
+    "processing_id": {
+      "via": "ingredients",
+      "model": "processing"
     }
   }
 }

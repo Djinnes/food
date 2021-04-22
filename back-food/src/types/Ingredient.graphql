@@ -1,11 +1,4 @@
 type Ingredient {
   id: ID!
   name: String
-  types: [IngredientType!]!
-  variants: [IngredientVariant!]!
-}
-
-type Query {
-  ingredients: [Ingredient!]!
-  ingredientsByDistance(latitude: String!, longitude: String!): [Ingredient!]!
 }

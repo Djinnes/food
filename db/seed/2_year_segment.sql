@@ -1,4 +1,4 @@
-INSERT INTO year_segment(name)
+INSERT INTO year_segment (name)
 VALUES ('Early January'),
        ('Late January'),
        ('Early February'),

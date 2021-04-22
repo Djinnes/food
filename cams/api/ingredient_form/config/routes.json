@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ingredient_form",
+      "handler": "ingredient_form.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ingredient_form/count",
+      "handler": "ingredient_form.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ingredient_form/:id",
+      "handler": "ingredient_form.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ingredient_form",
+      "handler": "ingredient_form.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ingredient_form/:id",
+      "handler": "ingredient_form.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ingredient_form/:id",
+      "handler": "ingredient_form.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "edible_material",
+  "info": {
+    "name": "edible_material",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "edible_material_type_id": {
+      "model": "edible_material_type"
+    },
+    "variants": {
+      "collection": "edible_material_variant",
+      "via": "edible_material_id"
+    },
+    "ingredients": {
+      "collection": "ingredient",
+      "via": "edible_material_id"
+    }
+  }
+}

@@ -1,4 +1,0 @@
-type Supplier {
-  name: String
-  distance: String
-}
