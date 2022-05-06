@@ -2,8 +2,8 @@ type Market {
   id: ID!
   name: String
   email: String
-  location: String
-  openingTimes: String
+  location: Location
+  openingTimes: [OpeningTime]
 }
 
 type Query {

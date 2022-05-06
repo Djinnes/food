@@ -3,7 +3,15 @@ const MARKET_QUERY = `query {
       id
       name
       email
-      location
+      location {
+        x
+        y
+      }
+      openingTimes {
+        open
+        close
+        day
+      }
     }
   }
       `;

@@ -78,7 +78,7 @@ const Markets = () => {
           <Row>
             <Col span={24}>
               {markets.map(({ id, name, email }) => (
-                <>
+                <React.Fragment key={id}>
                   <Row
                     onClick={() => setSelectedMarket(id)}
                     style={{
@@ -88,7 +88,7 @@ const Markets = () => {
                     <Col span={10}>
                       <div style={{ width: "100%", height: "100%" }}>
                         <img
-                          src={requestImageFile(`./${id}.jpg`).default}
+                          src={requestImageFile(`./${id}.jpg`)}
                           alt={name}
                           width="100%"
                           height="100%"
@@ -134,7 +134,7 @@ const Markets = () => {
                     </Col>
                   </Row>
                   <RowHR />
-                </>
+                </React.Fragment>
               ))}
             </Col>
           </Row>
@@ -143,7 +143,7 @@ const Markets = () => {
           <div style={{ width: "100%", height: "100%" }}>
             <MapContainer
               center={position}
-              zoom={13}
+              zoom={12}
               scrollWheelZoom={false}
               style={{ width: "100%", height: "100%" }}
             >
@@ -158,7 +158,7 @@ const Markets = () => {
                     click: () => setSelectedMarket(id),
                   }}
                   key={id}
-                  position={location.split(",").map((l) => parseFloat(l))}
+                  position={[location.y, location.x]}
                   showPopup={id === 1}
                   ref={(element) => (itemEls.current[id] = element)}
                 >

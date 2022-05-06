@@ -1,0 +1,6 @@
+type OpeningTime {
+  id: ID!
+  open: String
+  close: String!
+  day: Int!
+}

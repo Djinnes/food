@@ -1,4 +1,4 @@
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Layout, Menu } from "antd";
 
 import { routes } from "../../routes";
@@ -6,7 +6,7 @@ import { routes } from "../../routes";
 const { Header, Content } = Layout;
 
 const LayoutLayer = ({ children }) => {
-  const history = useHistory();
+  const navigate = useNavigate();
   return (
     <Layout className="layout">
       <Header>
@@ -16,7 +16,7 @@ const LayoutLayer = ({ children }) => {
           mode="horizontal"
           defaultSelectedKeys={["markets"]}
           onSelect={({ key }) => {
-            history.push(key);
+            navigate.push(key);
           }}
         >
           {routes.map(({ title, key }) => (

@@ -1,4 +1,4 @@
-import { Switch, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import Markets from "./pages/Markets";
 import Foods from "./pages/Foods";
@@ -17,17 +17,14 @@ export const routes = [
   },
 ];
 
-const Routes = () => (
-  <Switch>
+const MyRoutes = () => (
+  <Routes>
+    <Route path="" key={routes[0].key} element={routes[0].Component} />
     {routes.map(({ key, Component }) => (
-      <Route exact path={`/${key}`}>
-        <Component />
-      </Route>
+      <Route path={`/${key}`} key={key} element={<Component />} />
     ))}
-    <Route exact path="/food/:foodId">
-      <Food />
-    </Route>
-  </Switch>
+    <Route path="/food/:foodId" element={<Food />} />
+  </Routes>
 );
 
-export default Routes;
+export default MyRoutes;

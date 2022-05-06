@@ -1,5 +1,7 @@
 const pgPromise = require("pg-promise");
 const dotenv = require("dotenv");
+const path = require("path");
+const { ConnectionString } = require("connection-string");
 
 const initOptions = {};
 
@@ -10,18 +12,17 @@ const pgp = pgPromise(initOptions);
 
 dotenv.config();
 
-const { DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE } = process.env;
+const { DB_CONNECTION_STRING } = process.env;
 
-const cn = {
-  host: DB_HOST,
-  port: 5432,
-  user: DB_USER,
-  password: DB_PASSWORD,
-  database: DB_DATABASE,
-  poolSize: 20,
-  min: 0,
-};
-const db = pgp(cn);
+const cs = new ConnectionString(DB_CONNECTION_STRING);
+
+const sslrootcert = path.join(__dirname, "ca-certificate.crt");
+
+cs.setDefaults({
+  params: { sslrootcert },
+});
+
+const db = pgp(cs.toString());
 
 db.connect()
   .then((obj) => {
