@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "name": "Neuköllner Wochenmärkte - Maybachufer",
+    "number": "03029309601",
+    "email": "info@diemarktplaner.de",
+    "website": "https://www.diemarktplaner.de/maybachufer/",
+    "location": { "lat": 13.421638913685195, "lng": 52.495524555850764 },
+    "address": {
+      "streetNumber": "1-13",
+      "route": "Maybachufer",
+      "postalCode": 12047,
+      "district": "Neukölln",
+      "place": "Berlin"
+    },
+    "opening_hours": [
+      {
+        "close": { "day": 2, "time": "1100" },
+        "open": { "day": 2, "time": "1830" }
+      },
+      {
+        "close": { "day": 5, "time": "1100" },
+        "open": { "day": 5, "time": "1830" }
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Winterfeldtmarkt",
+    "number": "01754374303",
+    "email": "impressum@winterfeldt-markt.de",
+    "website": "http://winterfeldt-markt.de/",
+    "location": { "lat": 13.35436886340639, "lng": 52.49644464449477 },
+    "address": {
+      "route": "Winterfeldtplatz",
+      "postalCode": 10781,
+      "district": "Schöneberg",
+      "place": "Berlin"
+    },
+    "opening_hours": [
+      {
+        "close": { "day": 3, "time": "0800" },
+        "open": { "day": 3, "time": "1300" }
+      },
+      {
+        "close": { "day": 6, "time": "0800" },
+        "open": { "day": 6, "time": "1600" }
+      }
+    ]
+  }
+]
